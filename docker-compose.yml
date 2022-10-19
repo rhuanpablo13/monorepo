@@ -1,0 +1,13 @@
+version: '3.8'
+
+services: 
+    server:
+      build: ./server
+    client:
+      depends_on:
+        - server
+      build: ./client
+
+networks:
+  server:
+  client:
